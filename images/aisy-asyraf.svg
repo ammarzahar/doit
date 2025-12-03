@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-labelledby="title desc">
+    <title id="title">Aisy Asyraf logo</title>
+    <desc id="desc">Gold house monogram with A letterform and wordmark</desc>
+    <g fill="#d69b2d">
+        <path
+            d="M200 20 360 140 340 140 340 420 260 420 260 200 200 160 140 200 140 420 60 420 60 140 40 140Z" />
+        <path
+            d="M200 70 280 130 250 130 250 240 200 210 150 240 150 130 120 130Z" />
+        <path d="M170 240h60l22 180h-34l-13-110h-10l-13 110h-34Z" />
+        <rect x="180" y="270" width="40" height="150" fill="#ffffff" />
+        <rect x="150" y="250" width="100" height="16" />
+    </g>
+    <text x="200" y="475" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42"
+        font-weight="600" fill="#111">AISY ASYRAF</text>
+    <text x="200" y="505" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        letter-spacing="2" fill="#111">BY IMAM MUDA ASYRAF</text>
+</svg>

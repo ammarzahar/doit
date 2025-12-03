@@ -141,6 +141,25 @@
                 transform: rotateY(360deg);
             }
         }
+
+        /* Year End Sales Popup Animation */
+        @keyframes popupSlideIn {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .promo-gradient-text {
+            background: linear-gradient(135deg, #00e676 0%, #00c853 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 
@@ -240,9 +259,10 @@
                 <!-- Client 2 -->
                 <div
                     class="carousel-card w-48 h-24 -ml-24 -mt-12 glass-card rounded-xl flex items-center justify-center p-4 border border-green-100 hover:border-brand transition-colors cursor-pointer group">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-bolt text-2xl text-gray-400 group-hover:text-brand transition-colors"></i>
-                        <span class="font-bold text-gray-600 group-hover:text-gray-900">FlashEnergy</span>
+                    <div class="flex items-center gap-3">
+                        <img src="images/aisy-asyraf.svg" alt="Aisy Asyraf logo"
+                            class="h-12 w-auto object-contain drop-shadow group-hover:scale-105 transition-transform">
+                        <span class="font-bold text-gray-600 group-hover:text-gray-900">Aisy Asyraf</span>
                     </div>
                 </div>
                 <!-- Client 3 -->
@@ -376,6 +396,70 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Marketing</h3>
                     <p class="text-gray-500 text-sm">SEO, Social Media Management, and Paid Ads to drive growth for your
                         business.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card glass-card p-8 rounded-2xl cursor-pointer relative group"
+                    onclick="toggleService(this, 'Landing Page')">
+                    <div
+                        class="absolute top-4 right-4 w-6 h-6 rounded-full border-2 border-gray-300 check-circle flex items-center justify-center">
+                        <i class="fas fa-check text-xs"></i>
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-flag text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Landing Page</h3>
+                    <p class="text-gray-500 text-sm">High-conversion single pages optimized for campaigns and product
+                        launches.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card glass-card p-8 rounded-2xl cursor-pointer relative group"
+                    onclick="toggleService(this, 'Consultation')">
+                    <div
+                        class="absolute top-4 right-4 w-6 h-6 rounded-full border-2 border-gray-300 check-circle flex items-center justify-center">
+                        <i class="fas fa-check text-xs"></i>
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-comments text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Consultation</h3>
+                    <p class="text-gray-500 text-sm">Strategy workshops to map requirements, budgets, and delivery
+                        timelines confidently.</p>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card glass-card p-8 rounded-2xl cursor-pointer relative group"
+                    onclick="toggleService(this, 'Email')">
+                    <div
+                        class="absolute top-4 right-4 w-6 h-6 rounded-full border-2 border-gray-300 check-circle flex items-center justify-center">
+                        <i class="fas fa-check text-xs"></i>
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope-open-text text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                    <p class="text-gray-500 text-sm">Lifecycle campaigns, deliverability setups, and templates that
+                        convert.</p>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card glass-card p-8 rounded-2xl cursor-pointer relative group"
+                    onclick="toggleService(this, 'Designs')">
+                    <div
+                        class="absolute top-4 right-4 w-6 h-6 rounded-full border-2 border-gray-300 check-circle flex items-center justify-center">
+                        <i class="fas fa-check text-xs"></i>
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-paint-brush text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Designs</h3>
+                    <p class="text-gray-500 text-sm">Branding, UI/UX, and creative assets aligned with your launch
+                        goals.</p>
                 </div>
             </div>
         </div>
@@ -534,6 +618,13 @@
                     </div>
 
                     <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="tel" id="phone" required
+                            class="mt-1 block w-full px-4 py-3 rounded-lg border-gray-300 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand focus:border-transparent transition-colors outline-none"
+                            placeholder="+60 12 345 6789">
+                    </div>
+
+                    <div>
                         <label for="company" class="block text-sm font-medium text-gray-700">Company Name</label>
                         <input type="text" id="company"
                             class="mt-1 block w-full px-4 py-3 rounded-lg border-gray-300 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand focus:border-transparent transition-colors outline-none"
@@ -596,6 +687,52 @@
         </div>
     </div>
 
+    <!-- Year End Sales Promo Modal -->
+    <div id="promoModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center px-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closePromo()"></div>
+
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-brand"
+            style="animation: popupSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+            <!-- Decorative Circle -->
+            <div class="absolute -top-16 -right-16 w-32 h-32 bg-green-100 rounded-full blur-2xl opacity-60"></div>
+            <div class="absolute -bottom-16 -left-16 w-32 h-32 bg-green-100 rounded-full blur-2xl opacity-60"></div>
+
+            <button onclick="closePromo()"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+
+            <div class="p-8 text-center relative z-10">
+                <div
+                    class="inline-block bg-green-100 text-brand-dark px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+                    Year End Sales
+                </div>
+
+                <h2 class="text-5xl font-extrabold tracking-tighter mb-2 promo-gradient-text">
+                    75% OFF
+                </h2>
+                <p class="text-xl font-bold text-gray-800 mb-4">
+                    On All Tech Services
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-4 mb-6 border border-gray-100">
+                    <p class="text-sm text-gray-500 font-medium">Limited Time Offer</p>
+                    <p class="text-lg font-bold text-gray-900">1 Dec - 1 Jan 2026</p>
+                </div>
+
+                <div class="space-y-3">
+                    <a href="#contact" onclick="closePromo()"
+                        class="block w-full bg-brand hover:bg-brand-dark text-white text-lg font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02]">
+                        Claim Discount Now
+                    </a>
+                    <p class="text-xs text-gray-400">Terms and conditions apply. Valid for new clients only.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- UI Logic -->
     <script>
         // State for selected services
@@ -633,8 +770,21 @@
 
         function handleFormSubmit(e) {
             e.preventDefault();
-            // In a real app, you would send data to backend here
-            // including Array.from(selectedServices)
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const details = document.getElementById('details').value.trim();
+            const servicesList = Array.from(selectedServices);
+            const servicesText = servicesList.length ? servicesList.join(', ') : 'Not specified';
+
+            const subject = encodeURIComponent(`Quote Request - ${name || 'New Lead'}`);
+            const body = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company || 'N/A'}\nServices: ${servicesText}\n\nProject Details:\n${details}`
+            );
+
+            // Trigger the user's email client with prefilled content
+            window.location.href = `mailto:jootawanhq@gmail.com?subject=${subject}&body=${body}`;
 
             const modal = document.getElementById('successModal');
             const modalContent = modal.querySelector('div:nth-child(2)');
@@ -684,6 +834,23 @@
             const angle = (360 / totalCards) * i;
             // Rotate the card to face the center, then push it out
             cards[i].style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+        }
+
+        // Promo Modal Logic
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const promoModal = document.getElementById('promoModal');
+                // Optional persistence
+                // if (!localStorage.getItem('promoSeen')) {
+                promoModal.classList.remove('hidden');
+                // } 
+            }, 2000);
+        });
+
+        function closePromo() {
+            const promoModal = document.getElementById('promoModal');
+            promoModal.classList.add('hidden');
+            // localStorage.setItem('promoSeen', 'true');
         }
 
     </script>
